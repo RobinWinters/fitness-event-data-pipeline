@@ -47,4 +47,10 @@ This example favors explicit uncertainty over guessing a timezone, end time or c
 
 The example makes data contracts and failure handling easy to review. Those concerns connect native event discovery to applied engineering and fitness technology without disclosing private application code or recasting a target role as past employment. Test results describe this package only.
 
+## API documentation
+
+The [DocC catalog](Sources/FitnessEventDataPipeline/FitnessEventDataPipeline.docc/FitnessEventDataPipeline.md) links the public API to a [fixture walkthrough](Sources/FitnessEventDataPipeline/FitnessEventDataPipeline.docc/InspectingNormalization.md), explaining final receipts, conflict quarantine and provenance limits. It documents the teaching package rather than private product implementation.
+
+The `.spi.yml` manifest requests documentation for the library target if Swift Package Index accepts and successfully builds this package. Submission is pending; hosted documentation and index inclusion are not claimed. The existing 0.1.0 tag remains unchanged.
+
 [GitHub profile](https://github.com/RobinWinters) · [Codeberg profile](https://codeberg.org/RobinWinters) · [Professional work and evidence](https://github.com/RobinWinters/RobinWinters/tree/Radpository/professional)
