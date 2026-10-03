@@ -1,0 +1,7 @@
+[
+  {"sourceID":"demo-feed","externalID":"meetup-01","title":"Harbor Strength Meetup","startsAt":"2027-03-14T10:00:00-07:00","sourceURL":"https://example.org/events/meetup-01"},
+  {"sourceID":"demo-feed","externalID":"meetup-01","title":" Harbor  Strength Meetup ","startsAt":"2027-03-14T17:00:00Z","sourceURL":"https://example.org/events/meetup-01"},
+  {"sourceID":"demo-feed","externalID":"conflict-02","title":"Bay City Fitness Showcase","startsAt":"2027-04-10T09:00:00Z","sourceURL":"https://example.org/events/conflict-02"},
+  {"sourceID":"demo-feed","externalID":"conflict-02","title":"Bay City Fitness Showcase","startsAt":"2027-04-11T09:00:00Z","sourceURL":"https://example.org/events/conflict-02"},
+  {"sourceID":"demo-feed","externalID":"invalid-03","title":"Synthetic Invalid Timestamp","startsAt":"2027-02-30T09:00:00Z","sourceURL":"https://example.org/events/invalid-03"}
+]

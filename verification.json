@@ -1,0 +1,23 @@
+{
+  "swiftVersion": "6.4 (swiftlang-6.4.0.34.1)",
+  "tests": 12,
+  "testsStatus": "pass",
+  "platform": "macOS, local library/CLI execution",
+  "fixtureAccepted": 1,
+  "fixtureDecisions": [
+    "accepted",
+    "duplicate",
+    "conflict",
+    "conflict",
+    "rejected"
+  ],
+  "invalidJsonExitStatus": 1,
+  "invalidJsonStdoutEmpty": true,
+  "notClaimed": [
+    "ShowFlex integration",
+    "iPhone device execution",
+    "Linux execution",
+    "customer deployment",
+    "measured product outcomes"
+  ]
+}

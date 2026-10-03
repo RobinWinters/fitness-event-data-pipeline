@@ -1,0 +1,43 @@
+{
+  "events" : [
+    {
+      "externalID" : "meetup-01",
+      "id" : "demo-feed:meetup-01",
+      "sourceID" : "demo-feed",
+      "sourceURL" : "https://example.org/events/meetup-01",
+      "startsAtUTC" : "2027-03-14T17:00:00Z",
+      "title" : "Harbor Strength Meetup"
+    }
+  ],
+  "receipts" : [
+    {
+      "decision" : "accepted",
+      "id" : "demo-feed:meetup-01",
+      "inputIndex" : 0,
+      "reason" : "validated"
+    },
+    {
+      "decision" : "duplicate",
+      "id" : "demo-feed:meetup-01",
+      "inputIndex" : 1,
+      "reason" : "same_normalized_payload"
+    },
+    {
+      "decision" : "conflict",
+      "id" : "demo-feed:conflict-02",
+      "inputIndex" : 2,
+      "reason" : "conflicting_payload"
+    },
+    {
+      "decision" : "conflict",
+      "id" : "demo-feed:conflict-02",
+      "inputIndex" : 3,
+      "reason" : "conflicting_payload"
+    },
+    {
+      "decision" : "rejected",
+      "inputIndex" : 4,
+      "reason" : "invalid_start_timestamp"
+    }
+  ]
+}
