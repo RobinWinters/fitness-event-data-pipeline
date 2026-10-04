@@ -51,6 +51,8 @@ The example makes data contracts and failure handling easy to review. Those conc
 
 The [DocC catalog](Sources/FitnessEventDataPipeline/FitnessEventDataPipeline.docc/FitnessEventDataPipeline.md) links the public API to a [fixture walkthrough](Sources/FitnessEventDataPipeline/FitnessEventDataPipeline.docc/InspectingNormalization.md), explaining final receipts, conflict quarantine and provenance limits. It documents the teaching package rather than private product implementation.
 
-The `.spi.yml` manifest requests documentation for the library target if Swift Package Index accepts and successfully builds this package. Submission is pending; hosted documentation and index inclusion are not claimed. The existing 0.1.0 tag remains unchanged.
+Browse the [hosted API reference](https://robinwinters.github.io/docs/fitness-event-data-pipeline/documentation/fitnesseventdatapipeline/) and [synthetic-fixture walkthrough](https://robinwinters.github.io/docs/fitness-event-data-pipeline/documentation/fitnesseventdatapipeline/inspectingnormalization/). This static DocC snapshot was generated from package commit `08d138d81f50001fa02c553e5a9873ace8fc1b0f`; initial HTML includes page titles, descriptions and canonical URLs.
+
+The `.spi.yml` manifest requests documentation for the library target if Swift Package Index accepts and successfully builds this package. Submission is pending; SPI-hosted documentation and index inclusion are not claimed. The separately hosted reference does not establish a released ShowFlex feature or independent endorsement. The existing 0.1.0 tag remains unchanged.
 
 [GitHub profile](https://github.com/RobinWinters) · [Codeberg profile](https://codeberg.org/RobinWinters) · [Professional work and evidence](https://github.com/RobinWinters/RobinWinters/tree/Radpository/professional)
