@@ -9,7 +9,7 @@ This is a standalone educational example prepared with coding-assistant support.
 
 ## Run it
 
-Requires Swift 6.0 or later. The package declares macOS 13/iOS 16 minimums; current execution checks are on macOS with Swift 6.4. iOS-device and Linux execution are not claimed.
+Requires Swift 6.0 or later. The package declares macOS 13/iOS 16 minimums; execution checks now cover macOS and Linux as listed in [compatibility.json](compatibility.json). iOS-device execution is not established.
 
 ```sh
 swift test
@@ -54,12 +54,16 @@ The [DocC catalog](Sources/FitnessEventDataPipeline/FitnessEventDataPipeline.doc
 
 Browse the [hosted API reference](https://robinwinters.github.io/docs/fitness-event-data-pipeline/documentation/fitnesseventdatapipeline/) and [synthetic-fixture walkthrough](https://robinwinters.github.io/docs/fitness-event-data-pipeline/documentation/fitnesseventdatapipeline/inspectingnormalization/). This static DocC snapshot was generated from package commit `08d138d81f50001fa02c553e5a9873ace8fc1b0f`; initial HTML includes page titles, descriptions and canonical URLs.
 
-The `.spi.yml` manifest requests documentation for the library target if Swift Package Index accepts and successfully builds this package. Submission is pending; SPI-hosted documentation and index inclusion are not claimed. The separately hosted reference does not establish a released ShowFlex feature or independent endorsement. The existing 0.1.0 tag remains unchanged.
+The `.spi.yml` manifest requests documentation for the library target if Swift Package Index accepts and successfully builds this package. Submission is pending; SPI-hosted documentation and index inclusion are not claimed. The separately hosted reference does not establish a released ShowFlex feature or independent endorsement. The existing 0.1.0 tag remains unchanged. Version 0.1.1 adds public CI, CLI contract checks and a compatibility record; library behavior and public API are unchanged.
 
 [GitHub profile](https://github.com/RobinWinters) · [Codeberg profile](https://codeberg.org/RobinWinters) · [Professional work and evidence](https://github.com/RobinWinters/RobinWinters/tree/Radpository/professional)
 
 ## Reproducible checks
 
-The [public workflow](https://github.com/RobinWinters/fitness-event-data-pipeline/actions/workflows/swift.yml) requests builds and tests on macOS 15, Ubuntu 24.04 and an official Swift 6.0 Linux container. Its first run is pending. Run `python3 Scripts/check-fixture.py` after `swift build` to check the complete synthetic fixture, an empty array, malformed JSON and a wrong top-level input shape. The last two must exit with status 1, emit the stated input-contract error and produce no success report.
+The [public workflow](https://github.com/RobinWinters/fitness-event-data-pipeline/actions/workflows/swift.yml) requests builds and tests on macOS 15, Ubuntu 24.04 and the official digest-pinned Swift 6.0.3 Linux container. [Run 37172573330](https://github.com/RobinWinters/fitness-event-data-pipeline/actions/runs/37172573330) passed all three jobs. Each ran twelve Swift tests; the host-toolchain jobs also ran four CLI contract checks, while the minimum-toolchain job matched the complete fixture output. Run `python3 Scripts/check-fixture.py` after `swift build` to check the complete synthetic fixture, an empty array, malformed JSON and a wrong top-level input shape. The last two must exit with status 1, emit the stated input-contract error and produce no success report.
 
 The workflow reads this public repository without retained checkout credentials, private product source, deployment or external service access. Test and host compatibility conclusions depend on the actual linked run results.
+
+## Versioned use and citation
+
+Use version `0.1.1` from the [release/tag record](https://github.com/RobinWinters/fitness-event-data-pipeline/releases/tag/0.1.1). [CHANGELOG.md](CHANGELOG.md) describes this verification/documentation release; [CITATION.cff](CITATION.cff) provides author, version, source and license metadata. The complete executed checks and scoped platform results are in [compatibility.json](compatibility.json).

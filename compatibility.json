@@ -1,0 +1,43 @@
+{
+  "format": "public-swift-package-compatibility-record",
+  "version": "0.1.1",
+  "checkedAt": "2026-10-04T02:59:57.285Z",
+  "testedSourceCommit": "6533f5289666f047a3684d6f352468fff8f9bc28",
+  "workflowRun": "https://github.com/RobinWinters/fitness-event-data-pipeline/actions/runs/37172573330",
+  "results": [
+    {
+      "host": "Linux container, Swift 6.0.3-noble",
+      "swift": "6.0.3",
+      "target": "x86_64-unknown-linux-gnu",
+      "unitTestsPassed": 12,
+      "cliFixtureExactMatch": true,
+      "cliAdditionalCasesTested": false
+    },
+    {
+      "host": "macOS 15 standard runner",
+      "swift": "6.1.2",
+      "target": "arm64-apple-macosx15.0",
+      "unitTestsPassed": 12,
+      "cliContractChecksPassed": 4
+    },
+    {
+      "host": "Ubuntu 24.04 standard runner",
+      "swift": "6.4",
+      "target": "x86_64-unknown-linux-gnu",
+      "unitTestsPassed": 12,
+      "cliContractChecksPassed": 4
+    }
+  ],
+  "localCheck": {
+    "host": "macOS",
+    "swift": "6.4",
+    "unitTestsPassed": 12,
+    "cliContractChecksPassed": 4
+  },
+  "declaredMinimumPlatforms": {
+    "macOS": "13",
+    "iOS": "16"
+  },
+  "iosRuntimeChecked": false,
+  "sourceScope": "Standalone synthetic teaching package prepared with coding-assistant support; separate from private ShowFlex code."
+}

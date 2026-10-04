@@ -6,11 +6,10 @@ authors:
   - given-names: "Robin"
     family-names: "Winters"
     website: "https://robin.ac/"
-abstract: "Dependency-free Swift teaching package for explicit timestamps, stable event identity, retransmission deduplication and conflict receipts. Prepared with coding-assistant support using synthetic fixtures; separate from private ShowFlex source. Existing execution verification is limited to macOS."
+abstract: "Dependency-free Swift teaching package for explicit timestamps, stable event identity, retransmission deduplication and conflict receipts. Prepared with coding-assistant support using synthetic fixtures; separate from private ShowFlex source. Public CI verifies macOS and Linux builds, twelve Swift tests per job, and scoped fixture/input checks. iOS runtime is not established."
 repository-code: "https://github.com/RobinWinters/fitness-event-data-pipeline"
 url: "https://robinwinters.github.io/writing/fitness-event-data-contracts.html"
-version: "0.1.0"
-commit: "235318cd6ecab13be69a8c0b113a27f5d296aaaf"
+version: "0.1.1"
 date-released: "2026-10-03"
 license: "MIT"
 keywords:
