@@ -1,5 +1,6 @@
 # Fitness event data pipeline — a Swift teaching example
 
+[![Swift package checks](https://github.com/RobinWinters/fitness-event-data-pipeline/actions/workflows/swift.yml/badge.svg)](https://github.com/RobinWinters/fitness-event-data-pipeline/actions/workflows/swift.yml)
 Robin Winters · native iOS, applied AI and fitness technology · [robin.ac](https://robin.ac/)
 
 A small, dependency-free Swift package showing how an event feed can become inspectable product data. It validates explicit timestamps, preserves source identity, deduplicates retransmissions and quarantines conflicting payloads. A command-line executable makes the transformation reproducible without an application or cloud account.
@@ -56,3 +57,9 @@ Browse the [hosted API reference](https://robinwinters.github.io/docs/fitness-ev
 The `.spi.yml` manifest requests documentation for the library target if Swift Package Index accepts and successfully builds this package. Submission is pending; SPI-hosted documentation and index inclusion are not claimed. The separately hosted reference does not establish a released ShowFlex feature or independent endorsement. The existing 0.1.0 tag remains unchanged.
 
 [GitHub profile](https://github.com/RobinWinters) · [Codeberg profile](https://codeberg.org/RobinWinters) · [Professional work and evidence](https://github.com/RobinWinters/RobinWinters/tree/Radpository/professional)
+
+## Reproducible checks
+
+The [public workflow](https://github.com/RobinWinters/fitness-event-data-pipeline/actions/workflows/swift.yml) requests builds and tests on macOS 15, Ubuntu 24.04 and an official Swift 6.0 Linux container. Its first run is pending. Run `python3 Scripts/check-fixture.py` after `swift build` to check the complete synthetic fixture, an empty array, malformed JSON and a wrong top-level input shape. The last two must exit with status 1, emit the stated input-contract error and produce no success report.
+
+The workflow reads this public repository without retained checkout credentials, private product source, deployment or external service access. Test and host compatibility conclusions depend on the actual linked run results.

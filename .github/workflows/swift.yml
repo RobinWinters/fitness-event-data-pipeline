@@ -1,0 +1,67 @@
+name: Swift package checks
+
+on:
+  push:
+    branches: [Radpository]
+    paths:
+      - 'Package.swift'
+      - 'Sources/**'
+      - 'Tests/**'
+      - 'Fixtures/**'
+      - 'Scripts/**'
+      - '.github/workflows/swift.yml'
+  pull_request:
+    branches: [Radpository]
+    paths:
+      - 'Package.swift'
+      - 'Sources/**'
+      - 'Tests/**'
+      - 'Fixtures/**'
+      - 'Scripts/**'
+      - '.github/workflows/swift.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  host-toolchain:
+    name: Host toolchain (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, macos-15]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Record toolchain
+        run: swift --version
+      - name: Build package
+        run: swift build
+      - name: Run Swift tests
+        run: swift test
+      - name: Check CLI input and output contract
+        run: python3 Scripts/check-fixture.py
+
+  swift-six-minimum:
+    name: Swift 6.0 minimum (Linux)
+    runs-on: ubuntu-24.04
+    container: swift:6.0.3-noble@sha256:fc2fe3b78e138702f0d69fcf1420372eb044194450c8eb6ba778ab1c87ff7b1b
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Record toolchain
+        run: swift --version
+      - name: Build package
+        run: swift build
+      - name: Run Swift tests
+        run: swift test
+      - name: Compare synthetic fixture output
+        run: |
+          .build/debug/normalize-events < Fixtures/synthetic-events.json > observed-output.json
+          diff -u Fixtures/expected-output.json observed-output.json
